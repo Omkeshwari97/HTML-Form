@@ -43,3 +43,18 @@ mobile.addEventListener('input', function(){
         mobileError.textContent="Mobile Number is incorrect";
     }
 });
+
+//uc4 password validation
+const password = document.querySelector("#pwd");
+const passwordError = document.querySelector('.password-error');
+password.addEventListener('input', function(){
+    let passwordRegex = RegExp('^[A-za-z0-9]{8,}$');
+    if(passwordRegex.test(password.value))
+    {
+        passwordError.textContent="";
+    }
+    else
+    {
+        passwordError.textContent="Password is incorrect";
+    }
+});
