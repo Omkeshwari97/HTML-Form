@@ -44,11 +44,11 @@ mobile.addEventListener('input', function(){
     }
 });
 
-//uc4 password validation
+//uc4 uc5 password validation
 const password = document.querySelector("#pwd");
 const passwordError = document.querySelector('.password-error');
 password.addEventListener('input', function(){
-    let passwordRegex = RegExp('^[A-za-z0-9]{8,}$');
+    let passwordRegex = RegExp('^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$');
     if(passwordRegex.test(password.value))
     {
         passwordError.textContent="";
