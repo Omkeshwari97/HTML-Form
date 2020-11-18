@@ -28,3 +28,18 @@ email.addEventListener('input', function(){
         emailError.textContent="Email is incorrect";
     }
 });
+
+//uc3 mobile validation
+const mobile = document.querySelector("#tel");
+const mobileError = document.querySelector('.mobile-error');
+mobile.addEventListener('input', function(){
+    let phoneregex = RegExp('^[0-9]{2}[ ][789]{1}[0-9]{9}$');
+    if(phoneregex.test(mobile.value))
+    {
+        mobileError.textContent="";
+    }
+    else
+    {
+        mobileError.textContent="Mobile Number is incorrect";
+    }
+});
